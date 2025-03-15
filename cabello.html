@@ -1,125 +1,86 @@
 <!DOCTYPE html>
-<html lang= ¨es¨>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
-            header {
-                text-align: center;
-                padding: 20px;
-                background-color: #8ab2bd;
-                color: #fff;
-                position: initial;
-                width: 97%;
-                height: auto;
-                top: 0;
-                left: 0;
-                z-index: 10;
-                }
-            .logo{
-                    width: 120px;
-                    height: 120px;
-                    margin-top: 10px;
-                    text-align: center;
-
-                }
-                li{
-                    margin-left: 40px;
-                    margin-top: 20px;
-                    text-align: center;
-                    font-family: cursive;
-                }
-                .gallery {
-                display: flex;
-                justify-content: center;
-                flex-wrap: wrap;
-                gap: 20px; /* Espacio entre imágenes */
-                }
-
-                .image-container {
-                width: 250px;
-                text-align: center;
-                }
-
-                .image-container img {
-                width: 100%;
-                border-radius: 10px;
-                box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-                }
-                .image-container {
-                position: relative;
-                display: inline-block;
-                text-align: center;
-                margin: 20px;
-                }
-
-                .image-container img {
-                    width: 250px; /* Tamaño ajustable */
-                    border-radius: 10px;
-                    display: block;
-                }
-
-                .title-overlay {
-                    position: absolute;
-                    top: 10px; /* Ajusta la posición */
-                    left: 50%;
-                    transform: translateX(-50%);
-                    background: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
-                    color: white;
-                    padding: 5px 10px;
-                    font-size: 16px;
-                    font-weight: bold;
-                    border-radius: 5px;
-                }
-
-        </style>
-    </head>    
-    <body>
-        <header>
-            <div class=¨ancho¨>
-            <div class="logo">
-                <img src="img/Logo skintech.png" alt="Logo de la página" class="logo">
-
-            </div>
-            <nav>
-                <ul style="list-style-type: none;">
-                    <span class="es" style="display: inline-flex;">
-                        <li>
-                            <a href="index.html">Inicio</a>
-                        </li>
-                        <li>
-                            <a href="facial.html">Cosmetica Facial</a>
-                        </li>
-                        <li>
-                            <a href="corporal.html">Cosmetica Corporal</a>
-                        </li>
-                        <li>
-                            <a href="maquillaje.html">Maquillaje</a>
-                        </li>
-                    </span>
-            </nav>
-        </header>
-        <div class="gallery">
-            <div class="image-container">
-                <div class="title-overlay">Champú SkinTech</div>
-                <img src="img/champu skintech.png" alt="Producto 1">
-                <p class="image-description">Descubre el champú skintech, diseñado con tecnología avanzada para proporcionar una limpieza profunda, sin dañar la fibra capilar. Su forma enriquecida con ingredientes de última generación, fortalece, hidrata y revitaliza tu cabello desde la raíz hasta las puntas</p>
-            </div>
-            <div class="image-container">
-                <div class="title-overlay">Acondicionador SkinTech</div>
-                <img src="img/acondicionador skintech.png" alt="Producto 2">
-                <p class="image-description">El Acondicionador SkinTech combina tecnología avanzada con ingredientes de alto rendimiento para proporcionar una hidratación profunda y restaurar la suavidad natural del cabello. Su fórmula innovadora penetra en la fibra capilar, fortaleciendo desde el interior y dejando el cabello sedoso, brillante y libre de enredos.</p>
-            </div>
-            <div class="image-container">
-                <div class="title-overlay">Mascarilla Capilar SkinTech</div>
-                <img src="img/mascarilla capilar skintech.png" alt="Producto 3">
-                <p class="image-description">La Mascarilla Capilar SkinTech es el tratamiento intensivo definitivo para restaurar la salud y vitalidad de tu cabello. Gracias a su fórmula avanzada con tecnología de penetración profunda, nutre y repara la fibra capilar desde el interior, proporcionando una hidratación intensa y protección contra daños externos.</p>
-            </div>
-            <div class="image-container">
-                <div class="title-overlay">Sérum Capilar SkinTech</div>
-                <img src="img/serum capilar skintech.png" alt="Producto 3">
-                <p class="image-description">El Sérum Capilar SkinTech es el aliado perfecto para un cabello suave, brillante y protegido. Su fórmula de alta tecnología penetra profundamente en la fibra capilar, sellando la cutícula y aportando una hidratación duradera sin dejar residuos grasos. Ideal para reparar puntas abiertas, controlar el frizz y proteger contra el calor y la contaminación.</p>
-            </div>
-        
-        
-    </body>
+<html lang="es">
+  <head>
+    <title>SkinTech - Cabello</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <header>
+      <div class="ancho">
+        <div class="logo">
+          <img
+            src="img/Logo skintech.png"
+            alt="Logo de la página"
+            class="logo"
+          />
+        </div>
+      </div>
+      <nav>
+        <ul style="list-style-type: none">
+          <span class="es" style="display: inline-flex">
+            <li>
+              <a href="index.html">Inicio</a>
+            </li>
+            <li>
+              <a href="facial.html">Cosmetica Facial</a>
+            </li>
+            <li>
+              <a href="corporal.html">Cosmetica Corporal</a>
+            </li>
+            <li>
+              <a href="maquillaje.html">Maquillaje</a>
+            </li>
+          </span>
+        </ul>
+      </nav>
+    </header>
+    <div class="gallery">
+      <div class="image-container">
+        <div class="title-overlay">Champú SkinTech</div>
+        <img src="img/champu skintech.png" alt="Producto 1" />
+        <p class="image-description">
+          Descubre el champú skintech, diseñado con tecnología avanzada para
+          proporcionar una limpieza profunda, sin dañar la fibra capilar. Su
+          forma enriquecida con ingredientes de última generación, fortalece,
+          hidrata y revitaliza tu cabello desde la raíz hasta las puntas
+        </p>
+      </div>
+      <div class="image-container">
+        <div class="title-overlay">Acondicionador SkinTech</div>
+        <img src="img/acondicionador skintech.png" alt="Producto 2" />
+        <p class="image-description">
+          El Acondicionador SkinTech combina tecnología avanzada con
+          ingredientes de alto rendimiento para proporcionar una hidratación
+          profunda y restaurar la suavidad natural del cabello. Su fórmula
+          innovadora penetra en la fibra capilar, fortaleciendo desde el
+          interior y dejando el cabello sedoso, brillante y libre de enredos.
+        </p>
+      </div>
+      <div class="image-container">
+        <div class="title-overlay">Mascarilla Capilar SkinTech</div>
+        <img src="img/mascarilla capilar skintech.png" alt="Producto 3" />
+        <p class="image-description">
+          La Mascarilla Capilar SkinTech es el tratamiento intensivo definitivo
+          para restaurar la salud y vitalidad de tu cabello. Gracias a su
+          fórmula avanzada con tecnología de penetración profunda, nutre y
+          repara la fibra capilar desde el interior, proporcionando una
+          hidratación intensa y protección contra daños externos.
+        </p>
+      </div>
+      <div class="image-container">
+        <div class="title-overlay">Sérum Capilar SkinTech</div>
+        <img src="img/serum capilar skintech.png" alt="Producto 3" />
+        <p class="image-description">
+          El Sérum Capilar SkinTech es el aliado perfecto para un cabello suave,
+          brillante y protegido. Su fórmula de alta tecnología penetra
+          profundamente en la fibra capilar, sellando la cutícula y aportando
+          una hidratación duradera sin dejar residuos grasos. Ideal para reparar
+          puntas abiertas, controlar el frizz y proteger contra el calor y la
+          contaminación.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
