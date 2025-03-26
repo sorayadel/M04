@@ -1,3 +1,15 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/Roboto-Regular.woff2') format('woff2'),
+       url('fonts/Roboto-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
 header {
   text-align: center;
   padding: 20px;
@@ -22,7 +34,6 @@ li {
   margin-left: 40px;
   margin-top: 20px;
   text-align: center;
-  font-family: cursive;
 }
 
 .promo-container {
@@ -40,27 +51,41 @@ li {
   height: auto;
 }
 
-.oferta-flash{
+.oferta-container {
   display: flex;
   justify-content: center;
-  justify-items: center;
+  width: 100%;
+}
+
+.oferta-flash{
+  max-width: 500px;
+  display: flex;
+  flex-wrap: wrap;
   background: #ff4d4d;
   color: white;
   padding: 20px;
   border-radius: 10px;
-  width: 50%;
   margin: 20px auto;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.oferta-flash img{
+.oferta-flash .oferta-item {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+.oferta-flash .oferta-imagen {
+  flex-basis: 100%;
+  text-align: center;
   display: flex;
   justify-content: center;
-  justify-items: center;
-  gap: 10px;
+  gap: 5px;
+}
+
+.oferta-flash img {
   margin-top: 20px;
-  width: 20%;
-  height: auto;
+  max-width: 30%;
+  border-radius: 5px;
 }
 
 .content {
