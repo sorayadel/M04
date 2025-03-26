@@ -28,26 +28,60 @@ li {
 .promo-container {
   display: flex;
   justify-content: center;
-  gap: 15px;
-  margin-top: 20px;
-  flex-wrap: wrap;
-  width: auto;
+  justify-items: center;
+  gap: 6%;
+}
+
+.promo-container img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
   height: auto;
 }
 
+.oferta-flash{
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  background: #ff4d4d;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 50%;
+  margin: 20px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.oferta-flash img{
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  width: 20%;
+  height: auto;
+}
+
+.content {
+  flex: 1; /* Empuja el footer hacia abajo */
+}
+
 footer {
-  form {
-    margin-right: 35px;
+  footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+  }
+
+  .Contacto {
+      text-align: left;
   }
 
   .footer-content {
-    text-align: right;
-    margin-top: 500px;
-  }
-
-  .form-field {
-    margin-bottom: 10px;
-    text-align: right;
+      text-align: right;
   }
 
   button {
@@ -65,11 +99,6 @@ footer {
   }
 }
 
-.Contacto {
-  text-align: left;
-  margin-left: 35px;
-  justify-content: flex-end;
-}
 
 .gallery {
   display: flex;

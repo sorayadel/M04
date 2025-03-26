@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Cosmeland</title>
+    <title>SkinTech</title>
 
     <link rel="stylesheet" href="css/styles.css">
   </head>
@@ -12,7 +12,7 @@
     <header>
       <div class="ancho">
         <div class="logo">
-          <img src="img/Logo skintech.png" alt="Logo de la página" class="logo" />
+          <img src="img/Logo skintech.png" alt="Logo de la página" class="logo" style="display: flex;"/>
         </div>
       </div>
       <nav>
@@ -40,17 +40,51 @@
         <img src="img/SkinTech imagen promocional 3.png" alt="promoción 2" />
       </div>
     </main>
-    <div class="oferta-flash">
-      <h2>Oferta Flash</h2>
-    </div>
+    <div class="oferta-flash" style="display: center;">
+      <h2>🔥 ¡Oferta Flash! 🔥</h2>
+      <p>¡Aprovecha antes de que termine!</p>
+      <div class="contador" id="contador"></div>
+      <img src="img/Oferta serum.png" alt="Producto 1">
+      <img src="img/Oferta paleta maquillaje.png" alt="Producto 2">
+  </div>
+
+  <script>
+    function iniciarCuentaRegresiva(duracion) {
+        const contadorElemento = document.getElementById("contador");
+        let tiempoRestante = duracion;
+
+        function actualizarContador() {
+            let horas = Math.floor(tiempoRestante / 3600);
+            let minutos = Math.floor((tiempoRestante % 3600) / 60);
+            let segundos = tiempoRestante % 60;
+
+            contadorElemento.textContent = 
+                `${horas.toString().padStart(2, '0')}:${minutos.toString().padStart(2, '0')}:${segundos.toString().padStart(2, '0')}`;
+
+            if (tiempoRestante > 0) {
+                tiempoRestante--;
+            } else {
+                contadorElemento.textContent = "Oferta Finalizada";
+            }
+        }
+
+        actualizarContador();
+        setInterval(actualizarContador, 1000);
+    }
+
+    iniciarCuentaRegresiva(3600); // Cuenta regresiva de 1 hora
+</script>
+
+    <div class="content"> </div>
+
     <footer>
       <div class="Contacto">
         <h4>
-          <span class="es" style="display: block">Contacto</span>
+          <span class="es" style="display: flex">Contacto</span>
         </h4>
         <p>
-          info@cosmeland.es <br />
-          666666666 <br />
+          info@skintech.es <br />
+          656898925 <br />
           C/Piruleta, 8, 28902, Getafe (Madrid);
         </p>
       </div>
@@ -78,7 +112,7 @@
               <button type="submit">Suscribirse</button>
             </div>
           </form>
-          <p class="confirmation" id="confirmationMessage">
+          <p class="confirmation" id="confirmationMessage" style="display: none;">
             Gracias por suscribirte
           </p>
         </div>
@@ -103,3 +137,5 @@
     </footer>
   </body>
 </html>
+
+
