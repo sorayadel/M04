@@ -83,5 +83,52 @@
         </p>
       </div>
     </div>
+    <footer>
+      <div>
+        <div class="footer-content">
+          <form id="newsletterform" method="POST">
+            <h3>Suscribete a nuestra newsletter!!</h3>
+            <div class="form-field">
+              <label for="sexo">Genero:</label>
+              <select id="sexo" name="sexo">
+                <option value="hombre">Hombre</option>
+                <option value="mujer">Mujer</option>
+                <option value="sin especificar">No especifica</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="Introduce tu email"
+              />
+              <button type="submit">Suscribirse</button>
+            </div>
+          </form>
+          <p class="confirmation" id="confirmationMessage" style="display: none;">
+            Gracias por suscribirte
+          </p>
+        </div>
+        <script>
+          document
+            .getElementById("newsletterForm")
+            .addEventListener("submit", function (event) {
+              event.preventDefault();
+              let emailInput = document.getElementById("email");
+              let confirmationMessage = document.getElementById(
+                "confirmationMessage"
+              );
+              if (emailInput.value.includes("@")) {
+                confirmationMessage.style.display = "block";
+                emailInput.value = "";
+              } else {
+                alert("Por favor, introduce un email válido.");
+              }
+            });
+        </script>
+      </div>
+    </footer>
   </body>
 </html>
