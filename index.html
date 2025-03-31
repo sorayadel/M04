@@ -6,13 +6,18 @@
 
     <title>SkinTech</title>
 
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
     <header>
       <div class="ancho">
         <div class="logo">
-          <img src="img/Logo skintech.png" alt="Logo de la página" class="logo" style="display: flex;"/>
+          <img
+            src="img/Logo skintech.png"
+            alt="Logo de la página"
+            class="logo"
+            style="display: flex"
+          />
         </div>
       </div>
       <nav>
@@ -40,8 +45,8 @@
         <img src="img/SkinTech imagen promocional 3.png" alt="promoción 2" />
       </div>
     </main>
-  <div class="oferta-container">
-    <div class="oferta-flash">
+    <div class="oferta-container">
+      <div class="oferta-flash">
         <div class="oferta-item">
           <h2>🔥 ¡Oferta Flash! 🔥</h2>
         </div>
@@ -50,40 +55,43 @@
         </div>
         <div class="oferta-item contador" id="contador"></div>
         <div class="oferta-imagen">
-          <img src="img/Oferta serum.png" alt="Producto 1">
-          <img src="img/Oferta paleta maquillaje.png" alt="Producto 2">
+          <img src="img/Oferta serum.png" alt="Producto 1" />
+          <img src="img/Oferta paleta maquillaje.png" alt="Producto 2" />
         </div>
+      </div>
     </div>
-  </div>
 
-  <script>
-    function iniciarCuentaRegresiva(duracion) {
+    <script>
+      function iniciarCuentaRegresiva(duracion) {
         const contadorElemento = document.getElementById("contador");
         let tiempoRestante = duracion;
 
         function actualizarContador() {
-            let horas = Math.floor(tiempoRestante / 3600);
-            let minutos = Math.floor((tiempoRestante % 3600) / 60);
-            let segundos = tiempoRestante % 60;
+          let horas = Math.floor(tiempoRestante / 3600);
+          let minutos = Math.floor((tiempoRestante % 3600) / 60);
+          let segundos = tiempoRestante % 60;
 
-            contadorElemento.textContent = 
-                `${horas.toString().padStart(2, '0')}:${minutos.toString().padStart(2, '0')}:${segundos.toString().padStart(2, '0')}`;
+          contadorElemento.textContent = `${horas
+            .toString()
+            .padStart(2, "0")}:${minutos.toString().padStart(2, "0")}:${segundos
+            .toString()
+            .padStart(2, "0")}`;
 
-            if (tiempoRestante > 0) {
-                tiempoRestante--;
-            } else {
-                contadorElemento.textContent = "Oferta Finalizada";
-            }
+          if (tiempoRestante > 0) {
+            tiempoRestante--;
+          } else {
+            contadorElemento.textContent = "Oferta Finalizada";
+          }
         }
 
         actualizarContador();
         setInterval(actualizarContador, 1000);
-    }
+      }
 
-    iniciarCuentaRegresiva(3600); // Cuenta regresiva de 1 hora
-</script>
+      iniciarCuentaRegresiva(3600); // Cuenta regresiva de 1 hora
+    </script>
 
-    <div class="content"> </div>
+    <div class="content"></div>
 
     <footer>
       <div class="Contacto">
@@ -120,7 +128,11 @@
               <button type="submit">Suscribirse</button>
             </div>
           </form>
-          <p class="confirmation" id="confirmationMessage" style="display: none;">
+          <p
+            class="confirmation"
+            id="confirmationMessage"
+            style="display: none"
+          >
             Gracias por suscribirte
           </p>
         </div>
@@ -145,5 +157,3 @@
     </footer>
   </body>
 </html>
-
-
