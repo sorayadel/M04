@@ -85,55 +85,44 @@
       </div>
     </div>
     <footer>
-      <div>
-        <div class="footer-content">
+      <section>
+        <section class="footer-content">
           <form id="newsletterform" method="POST">
-            <h3>Suscribete a nuestra newsletter!!</h3>
-            <div class="form-field">
-              <label for="sexo">Genero:</label>
+            <h3>Suscríbete a nuestra newsletter!!</h3>
+            <section class="form-field">
+              <label for="sexo">Género:</label>
               <select id="sexo" name="sexo">
                 <option value="hombre">Hombre</option>
                 <option value="mujer">Mujer</option>
                 <option value="sin especificar">No especifica</option>
               </select>
-            </div>
-            <div class="form-field">
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                placeholder="Introduce tu email"
-              />
+              <label for="nombre">Nombre:</label>
+              <input type="text" id="nombre" name="nombre" required><br><br>
+              <label for="apellido">Apellido:</label>
+              <input type="text" id="apellido" name="apellido" required><br><br>
+            </section>
+            
+            <section class="form-field">
+              <input type="email" id="email" name="email" required placeholder="Introduce tu email" />
               <button type="submit">Suscribirse</button>
-            </div>
+            </section>
           </form>
-          <p
-            class="confirmation"
-            id="confirmationMessage"
-            style="display: none"
-          >
-            Gracias por suscribirte
-          </p>
-        </div>
+          <p class="message hidden" id="confirmationMessage">Gracias por suscribirte</p>
+        </section>
         <script>
-          document
-            .getElementById("newsletterForm")
-            .addEventListener("submit", function (event) {
-              event.preventDefault();
-              let emailInput = document.getElementById("email");
-              let confirmationMessage = document.getElementById(
-                "confirmationMessage"
-              );
-              if (emailInput.value.includes("@")) {
-                confirmationMessage.style.display = "block";
-                emailInput.value = "";
-              } else {
-                alert("Por favor, introduce un email válido.");
-              }
-            });
+          document.getElementById("newsletterForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            let emailInput = document.getElementById("email");
+            let confirmationMessage = document.getElementById("confirmationMessage");
+            if (emailInput.value.includes("@")) {
+              confirmationMessage.style.display = "block";
+              emailInput.value = "";
+            } else {
+              alert("Por favor, introduce un email válido.");
+            }
+          });
         </script>
-      </div>
+      </section>
     </footer>
   </body>
 </html>

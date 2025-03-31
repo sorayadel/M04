@@ -1,13 +1,13 @@
 @font-face {
-  font-family: 'Roboto';
-  src: url('fonts/Roboto-Regular.woff2') format('woff2'),
-       url('fonts/Roboto-Regular.woff') format('woff');
+  font-family: "Roboto";
+  src: url("fonts/Roboto-Regular.woff2") format("woff2"),
+    url("fonts/Roboto-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   background: linear-gradient(to right, #d1e3e7, #41a4dd);
 }
 
@@ -60,9 +60,10 @@ li {
   display: flex;
   justify-content: center;
   width: 100%;
+  animation: fadeIn 1.5s ease-out forwards;
 }
 
-.oferta-flash{
+.oferta-flash {
   max-width: 650px;
   display: flex;
   flex-wrap: wrap;
@@ -88,6 +89,7 @@ li {
   gap: 30px;
 }
 
+
 .oferta-flash img {
   margin-top: 20px;
   max-width: 50%;
@@ -104,20 +106,24 @@ footer {
   footer {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    align-items: flex-start;
+    padding: 10px;
+    width: 100%;
     background-color: #6794ac;
     color: white;
   }
 
   .Contacto {
-      text-align: left;
+    text-align: left;
+    margin-right: auto;
   }
 
   .footer-content {
-      text-align: right;
-      margin-top: 250px;
-      background: radial-gradient(circle, #7d84b7, #8790ca, #93b9f2);
-      border-radius: 2%;
+    text-align: right;
+    margin-left: auto;
+    margin-top: 220px;
+    background: radial-gradient(circle, #7d84b7, #8790ca, #93b9f2);
+    border-radius: 2%;
   }
 
   button {
@@ -126,7 +132,7 @@ footer {
     border: none;
     padding: 8px 17px;
     cursor: pointer;
-    font-size: 12px;
+    font-size: 15px;
     border-radius: 4px;
   }
 
@@ -134,7 +140,6 @@ footer {
     background-color: #3d6986;
   }
 }
-
 
 .gallery {
   display: flex;
