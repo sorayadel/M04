@@ -58,7 +58,7 @@ li {
 }
 
 .oferta-flash{
-  max-width: 500px;
+  max-width: 650px;
   display: flex;
   flex-wrap: wrap;
   background: #ff4d4d;
@@ -79,12 +79,12 @@ li {
   text-align: center;
   display: flex;
   justify-content: center;
-  gap: 5px;
+  gap: 6px;
 }
 
 .oferta-flash img {
   margin-top: 20px;
-  max-width: 30%;
+  max-width: 50%;
   border-radius: 5px;
 }
 
