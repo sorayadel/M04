@@ -10,7 +10,7 @@
   </head>
   <body>
     <header>
-      <div class="ancho">
+      <section class="ancho">
         <div class="logo">
           <img
             src="img/Logo skintech.png"
@@ -19,7 +19,7 @@
             style="display: flex"
           />
         </div>
-      </div>
+      </section>
       <nav>
         <ul style="list-style-type: none">
           <span class="es" style="display: inline-flex">
@@ -45,7 +45,7 @@
         <img src="img/SkinTech imagen promocional 3.png" alt="promoción 2" />
       </div>
     </main>
-    <div class="oferta-container">
+    <section class="oferta-container">
       <div class="oferta-flash">
         <div class="oferta-item">
           <h2>🔥 ¡Oferta Flash! 🔥</h2>
@@ -59,7 +59,7 @@
           <img src="img/Oferta paleta maquillaje.png" alt="Producto 2" />
         </div>
       </div>
-    </div>
+    </section>
 
     <script>
       function iniciarCuentaRegresiva(duracion) {
@@ -91,7 +91,7 @@
       iniciarCuentaRegresiva(3600); // Cuenta regresiva de 1 hora
     </script>
 
-    <div class="content"></div>
+    <section class="content"></section>
 
     <footer>
       <section class="Contacto">
@@ -104,9 +104,12 @@
           C/Rosas, 8, 28902, Getafe (Madrid);
         </p>
       </section>
-    
+
       <section>
         <section class="footer-content">
+          <p class="confirmation-message" id="confirmationMessage">
+            ¡¡Gracias por suscribirte!!
+          </p>
           <form id="newsletterform" method="POST">
             <h3>Suscríbete a nuestra newsletter!!</h3>
             <section class="form-field">
@@ -117,31 +120,69 @@
                 <option value="sin especificar">No especifica</option>
               </select>
               <label for="nombre">Nombre:</label>
-              <input type="text" id="nombre" name="nombre" required><br><br>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                required
+              /><br /><br />
               <label for="apellido">Apellido:</label>
-              <input type="text" id="apellido" name="apellido" required><br><br>
+              <input
+                type="text"
+                id="apellido"
+                name="apellido"
+                required
+              /><br /><br />
             </section>
-            
+
             <section class="form-field">
-              <input type="email" id="email" name="email" required placeholder="Introduce tu email" />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="Introduce tu email"
+              />
               <button type="submit">Suscribirse</button>
             </section>
           </form>
-          <p class="message hidden" id="confirmationMessage">Gracias por suscribirte</p>
         </section>
+
         <script>
-          document.getElementById("newsletterForm").addEventListener("submit", function (event) {
-            event.preventDefault();
-            let emailInput = document.getElementById("email");
-            let confirmationMessage = document.getElementById("confirmationMessage");
-            if (emailInput.value.includes("@")) {
-              confirmationMessage.style.display = "block";
-              emailInput.value = "";
-            } else {
-              alert("Por favor, introduce un email válido.");
-            }
+          document.addEventListener("DOMContentLoaded", function () {
+            // Asegurar que el mensaje esté oculto al recargar la página
+            document.getElementById("confirmationMessage").style.display =
+              "none";
+
+            document
+              .getElementById("newsletterform")
+              .addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                let emailInput = document.getElementById("email");
+                let confirmationMessage = document.getElementById(
+                  "confirmationMessage"
+                );
+
+                if (emailInput.value.includes("@")) {
+                  confirmationMessage.style.display = "block"; // Mostrar mensaje arriba del formulario
+                  emailInput.value = "";
+
+                  setTimeout(() => {
+                    confirmationMessage.style.display = "none"; 
+                  }, 10000);
+                } else {
+                  alert("Por favor, introduce un email válido.");
+                }
+              });
           });
         </script>
+
+        <style>
+          .hidden {
+            display: none;
+          }
+        </style>
       </section>
     </footer>
   </body>

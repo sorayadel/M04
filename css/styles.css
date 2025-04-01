@@ -89,7 +89,6 @@ li {
   gap: 30px;
 }
 
-
 .oferta-flash img {
   margin-top: 20px;
   max-width: 50%;
@@ -138,6 +137,12 @@ footer {
 
   button:hover {
     background-color: #3d6986;
+  }
+
+  .confirmation-message {
+    display: none; /* Oculto por defecto */
+    margin-bottom: 25px; 
+    width: 100%; 
   }
 }
 
