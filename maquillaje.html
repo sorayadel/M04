@@ -30,23 +30,30 @@
             <li>
               <a href="catalogo.html">Catálogo</a>
             </li>
+            <li>
+              <a href="contacto.html">Contacto/Reserva</a>
+            </li>
           </span>
         </ul>
       </nav>
-    </header><br>
+    </header>
+    <br />
     <p class="intro-text">
       En [Nombre de tu marca], sabemos que el maquillaje es una herramienta
       poderosa para resaltar tu belleza única. Por eso, ofrecemos una selección
       de productos de alta calidad, diseñados para realzar tus rasgos y brindar
-      resultados duraderos. 
-      ¡Descubre la magia del maquillaje y siente la confianza de expresar tu 
-      estilo con nuestros productos exclusivos!
+      resultados duraderos. ¡Descubre la magia del maquillaje y siente la
+      confianza de expresar tu estilo con nuestros productos exclusivos!
     </p>
     <section class="gallery">
       <div class="image-container">
         <p class="click-hint">Haz clic para ver más</p>
         <div class="title-overlay">SkinTech Smart Foundation</div>
-        <img src="img/base maquillaje skintech.png" alt="Producto 1" onclick="toggleText(this)" />
+        <img
+          src="img/base maquillaje skintech.png"
+          alt="Producto 1"
+          onclick="toggleText(this)"
+        />
         <p class="image-description">
           La SkinTech Smart Foundation es una base de maquillaje revolucionaria
           que se adapta a tu piel en tiempo real gracias a su innovador sensor
@@ -58,7 +65,11 @@
       </div>
       <div class="image-container">
         <div class="title-overlay">SkinTech Smart Concealer</div>
-        <img src="img/corrector skintech.png" alt="Producto 2" onclick="toggleText(this)" />
+        <img
+          src="img/corrector skintech.png"
+          alt="Producto 2"
+          onclick="toggleText(this)"
+        />
         <p class="image-description">
           El SkinTech Smart Concealer es un corrector revolucionario que se
           ajusta automáticamente a tu piel gracias a su sensor de subtono
@@ -71,7 +82,11 @@
       </div>
       <div class="image-container">
         <div class="title-overlay">SkinTech Smart Mascara</div>
-        <img src="img/mascara de pestañas skintech.png" alt="Producto 3" onclick="toggleText(this)" />
+        <img
+          src="img/mascara de pestañas skintech.png"
+          alt="Producto 3"
+          onclick="toggleText(this)"
+        />
         <p class="image-description">
           La SkinTech Smart Mascara es una revolución en el mundo del
           maquillaje, diseñada con micro-sensores inteligentes en su cepillo que
@@ -85,7 +100,11 @@
       </div>
       <div class="image-container">
         <div class="title-overlay">SkinTech Smart Eyeshadow Palette</div>
-        <img src="img/paleta sombras skintech.png" alt="Producto 4" onclick="toggleText(this)" />
+        <img
+          src="img/paleta sombras skintech.png"
+          alt="Producto 4"
+          onclick="toggleText(this)"
+        />
         <p class="image-description">
           La SkinTech Smart Eyeshadow Palette es una paleta de sombras de última
           generación diseñada para ofrecer pigmentos adaptativos, texturas
@@ -105,6 +124,9 @@
     <footer>
       <section>
         <section class="footer-content">
+          <p class="message hidden" id="confirmationMessage">
+            Gracias por suscribirte
+          </p>
           <form id="newsletterform" method="POST">
             <h3>Suscríbete a nuestra newsletter!!</h3>
             <section class="form-field">
@@ -141,9 +163,6 @@
               <button type="submit">Suscribirse</button>
             </section>
           </form>
-          <p class="message hidden" id="confirmationMessage">
-            Gracias por suscribirte
-          </p>
         </section>
         <script>
           document.addEventListener("DOMContentLoaded", function () {
@@ -166,7 +185,7 @@
                   emailInput.value = "";
 
                   setTimeout(() => {
-                    confirmationMessage.style.display = "none"; 
+                    confirmationMessage.style.display = "none";
                   }, 10000);
                 } else {
                   alert("Por favor, introduce un email válido.");

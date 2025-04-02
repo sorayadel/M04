@@ -255,3 +255,55 @@ footer {
   max-width: 30%; 
   height: auto;
 }
+
+.contacto img {
+  display: grid;
+  justify-content: center;
+  justify-items: left;
+  align-items: left;
+  margin: auto;
+  width: 50%;
+  max-width: 30%; 
+  height: auto;
+}
+
+.form-reserve {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: right;
+  width: 100%;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #a6c5de;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.form-reserve label {
+  text-align: center;
+  display: block;
+  margin: 10px 0;
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+}
+.form-title {
+  text-align: center; /* Centra el texto */
+  font-size: 34px; /* Ajusta el tamaño de la fuente */
+  font-weight: bold; /* Hace el texto más grueso */
+  margin-bottom: 20px; /* Espaciado inferior */
+  color: #0957f3; /* Cambia el color del texto */
+}
+.hidden {
+  display: none;
+}
+
+#reservaConfirmationMessage {
+  color: green;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}

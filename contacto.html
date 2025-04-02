@@ -42,46 +42,51 @@
         </ul>
       </nav>
     </header>
+    <br />
+    <section class="contacto">
+      <img
+        src="img/Contacto.png"
+        alt="Imagen de contacto"
+        class="contacto-img"
+      /><br />
+    </section>
+    <form id="reservaform" method="POST">
+      <h3 class="form-title">Reserva tus productos</h3>
+      <p id="reservaConfirmationMessage" class="hidden">
+        ¡Formulario enviado correctamente!
+      </p>
+      <section class="form-reserve">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required /><br /><br />
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos" required />
+        <label for="email">Email: </label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="Introduce tu email"
+        /><br /><br />
+        <label for="mensaje">Mensaje:</label><br />
+        <textarea
+          id="mensaje"
+          name="mensaje"
+          rows="4"
+          cols="50"
+          required
+          placeholder="Escribe tu mensaje aquí..."
+        ></textarea
+        ><br /><br />
+        <button type="submit">Contacta</button>
+      </section>
+    </form>
     <footer>
       <section>
-        <form id="reservaform" method="POST">
-          <h3>Reserva tus productos</h3>
-          <section class="form-field">
-            <label for="nombre">Nombre:</label>
-            <input
-              type="text"
-              id="nombre"
-              name="nombre"
-              required
-            /><br /><br />
-            <label for="apellidos">Apellidos:</label>
-            <input
-              type="text"
-              id="apellidos"
-              name="apellidos"
-              required
-            /><br /><br />
-          </section>
-          <section class="form-field">
-            <input
-              type="email"
-              id="email"
-              name="email"
-              required
-              placeholder="Introduce tu email"
-            />
-            <label for="mensaje">Mensaje:</label>
-            <textarea
-              id="mensaje"
-              name="mensaje"
-              rows="4"
-              cols="50"
-              required
-              placeholder="Escribe tu mensaje aquí..."
-            ></textarea><br /><br />
-            <button type="submit">Suscribirse</button>
-          </section>
         <section class="footer-content">
+          <p class="message hidden" id="confirmationMessage">
+            Gracias por suscribirte
+          </p>
           <form id="newsletterform" method="POST">
             <h3>Suscríbete a nuestra newsletter!!</h3>
             <section class="form-field">
@@ -94,7 +99,7 @@
               <label for="nombre">Nombre:</label>
               <input
                 type="text"
-                id="nombre"
+                id="nombre_newsletter"
                 name="nombre"
                 required
               /><br /><br />
@@ -106,22 +111,41 @@
                 required
               /><br /><br />
             </section>
-
             <section class="form-field">
               <input
                 type="email"
-                id="email"
-                name="email"
+                id="email_newsletter"
+                name="email_newsletter"
                 required
                 placeholder="Introduce tu email"
               />
               <button type="submit">Suscribirse</button>
             </section>
           </form>
-          <p class="message hidden" id="confirmationMessage">
-            Gracias por suscribirte
-          </p>
         </section>
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const reservaForm = document.getElementById("reservaform");
+            const confirmationMessage = document.getElementById(
+              "reservaConfirmationMessage"
+            );
+
+            reservaForm.addEventListener("submit", function (event) {
+              event.preventDefault(); // Evita el envío real del formulario
+
+              // Mostrar el mensaje de confirmación
+              confirmationMessage.classList.remove("hidden");
+
+              // Opcional: Ocultar el mensaje después de unos segundos
+              setTimeout(() => {
+                confirmationMessage.classList.add("hidden");
+              }, 5000);
+
+              // Opcional: Limpiar los campos del formulario
+              reservaForm.reset();
+            });
+          });
+        </script>
         <script>
           document.addEventListener("DOMContentLoaded", function () {
             // Asegurar que el mensaje esté oculto al recargar la página
@@ -133,7 +157,7 @@
               .addEventListener("submit", function (event) {
                 event.preventDefault();
 
-                let emailInput = document.getElementById("email");
+                let emailInput = document.getElementById("email_newsletter");
                 let confirmationMessage = document.getElementById(
                   "confirmationMessage"
                 );
