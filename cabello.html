@@ -37,90 +37,130 @@
       </nav>
     </header>
     <section class="gallery">
-      <div class="image-container">
-        <div class="title-overlay">Champú SkinTech</div>
-        <img src="img/champu skintech.png" alt="Producto 1" />
-        <p class="image-description">
-          Descubre el champú skintech, diseñado con tecnología avanzada para
-          proporcionar una limpieza profunda, sin dañar la fibra capilar. Su
-          forma enriquecida con ingredientes de última generación, fortalece,
-          hidrata y revitaliza tu cabello desde la raíz hasta las puntas
-        </p>
-      </div>
-      <div class="image-container">
-        <div class="title-overlay">Acondicionador SkinTech</div>
-        <img src="img/acondicionador skintech.png" alt="Producto 2" />
-        <p class="image-description">
-          El Acondicionador SkinTech combina tecnología avanzada con
-          ingredientes de alto rendimiento para proporcionar una hidratación
-          profunda y restaurar la suavidad natural del cabello. Su fórmula
-          innovadora penetra en la fibra capilar, fortaleciendo desde el
-          interior y dejando el cabello sedoso, brillante y libre de enredos.
-        </p>
-      </div>
-      <div class="image-container">
-        <div class="title-overlay">Mascarilla Capilar SkinTech</div>
-        <img src="img/mascarilla capilar skintech.png" alt="Producto 3" />
-        <p class="image-description">
-          La Mascarilla Capilar SkinTech es el tratamiento intensivo definitivo
-          para restaurar la salud y vitalidad de tu cabello. Gracias a su
-          fórmula avanzada con tecnología de penetración profunda, nutre y
-          repara la fibra capilar desde el interior, proporcionando una
-          hidratación intensa y protección contra daños externos.
-        </p>
-      </div>
-      <div class="image-container">
-        <div class="title-overlay">Sérum Capilar SkinTech</div>
-        <img src="img/serum capilar skintech.png" alt="Producto 3" />
-        <p class="image-description">
-          El Sérum Capilar SkinTech es el aliado perfecto para un cabello suave,
-          brillante y protegido. Su fórmula de alta tecnología penetra
-          profundamente en la fibra capilar, sellando la cutícula y aportando
-          una hidratación duradera sin dejar residuos grasos. Ideal para reparar
-          puntas abiertas, controlar el frizz y proteger contra el calor y la
-          contaminación.
-        </p>
-      </div>
-    </section>
-    <footer>
-      <section>
-        <section class="footer-content">
-          <form id="newsletterform" method="POST">
-            <h3>Suscríbete a nuestra newsletter!!</h3>
-            <section class="form-field">
-              <label for="sexo">Género:</label>
-              <select id="sexo" name="sexo">
-                <option value="hombre">Hombre</option>
-                <option value="mujer">Mujer</option>
-                <option value="sin especificar">No especifica</option>
-              </select>
-              <label for="nombre">Nombre:</label>
-              <input type="text" id="nombre" name="nombre" required><br><br>
-              <label for="apellido">Apellido:</label>
-              <input type="text" id="apellido" name="apellido" required><br><br>
-            </section>
-            
-            <section class="form-field">
-              <input type="email" id="email" name="email" required placeholder="Introduce tu email" />
-              <button type="submit">Suscribirse</button>
-            </section>
-          </form>
-          <p class="message hidden" id="confirmationMessage">Gracias por suscribirte</p>
+        <div class="image-container">
+          <div class="title-overlay">Champú SkinTech</div>
+          <img src="img/champu skintech.png" alt="Producto 1" />
+          <p class="image-description">
+            Descubre el champú skintech, diseñado con tecnología avanzada para
+            proporcionar una limpieza profunda, sin dañar la fibra capilar. Su
+            forma enriquecida con ingredientes de última generación, fortalece,
+            hidrata y revitaliza tu cabello desde la raíz hasta las puntas
+          </p>
+        </div>
+        <div class="image-container">
+          <div class="title-overlay">Acondicionador SkinTech</div>
+          <img src="img/acondicionador skintech.png" alt="Producto 2" />
+          <p class="image-description">
+            El Acondicionador SkinTech combina tecnología avanzada con
+            ingredientes de alto rendimiento para proporcionar una hidratación
+            profunda y restaurar la suavidad natural del cabello. Su fórmula
+            innovadora penetra en la fibra capilar, fortaleciendo desde el
+            interior y dejando el cabello sedoso, brillante y libre de enredos.
+          </p>
+        </div>
+        <div class="image-container">
+          <div class="title-overlay">Mascarilla Capilar SkinTech</div>
+          <img src="img/mascarilla capilar skintech.png" alt="Producto 3" />
+          <p class="image-description">
+            La Mascarilla Capilar SkinTech es el tratamiento intensivo definitivo
+            para restaurar la salud y vitalidad de tu cabello. Gracias a su
+            fórmula avanzada con tecnología de penetración profunda, nutre y
+            repara la fibra capilar desde el interior, proporcionando una
+            hidratación intensa y protección contra daños externos.
+          </p>
+        </div>
+        <div class="image-container">
+          <div class="title-overlay">Sérum Capilar SkinTech</div>
+          <img src="img/serum capilar skintech.png" alt="Producto 3" />
+          <p class="image-description">
+            El Sérum Capilar SkinTech es el aliado perfecto para un cabello suave,
+            brillante y protegido. Su fórmula de alta tecnología penetra
+            profundamente en la fibra capilar, sellando la cutícula y aportando
+            una hidratación duradera sin dejar residuos grasos. Ideal para reparar
+            puntas abiertas, controlar el frizz y proteger contra el calor y la
+            contaminación.
+          </p>
+        </div>
         </section>
-        <script>
-          document.getElementById("newsletterForm").addEventListener("submit", function (event) {
-            event.preventDefault();
-            let emailInput = document.getElementById("email");
-            let confirmationMessage = document.getElementById("confirmationMessage");
-            if (emailInput.value.includes("@")) {
-              confirmationMessage.style.display = "block";
-              emailInput.value = "";
-            } else {
-              alert("Por favor, introduce un email válido.");
-            }
-          });
-        </script>
-      </section>
-    </footer>
+        <footer>
+              <section>
+                <section class="footer-content">
+                  <p class="confirmation-message" id="confirmationMessage">
+                    ¡¡Gracias por suscribirte!!
+                  </p>
+                  <form id="newsletterform" method="POST">
+                    <h3>Suscríbete a nuestra newsletter!!</h3>
+                    <section class="form-field">
+                      <label for="sexo">Género:</label>
+                      <select id="sexo" name="sexo">
+                        <option value="hombre">Hombre</option>
+                        <option value="mujer">Mujer</option>
+                        <option value="sin especificar">No especifica</option>
+                      </select>
+                      <label for="nombre">Nombre:</label>
+                      <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        required
+                      /><br /><br />
+                      <label for="apellido">Apellido:</label>
+                      <input
+                        type="text"
+                        id="apellido"
+                        name="apellido"
+                        required
+                      /><br /><br />
+                    </section>
+        
+                    <section class="form-field">
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        placeholder="Introduce tu email"
+                      />
+                      <button type="submit">Suscribirse</button>
+                    </section>
+                  </form>
+                </section>
+        
+                <script>
+                  document.addEventListener("DOMContentLoaded", function () {
+                    // Asegurar que el mensaje esté oculto al recargar la página
+                    document.getElementById("confirmationMessage").style.display =
+                      "none";
+        
+                    document
+                      .getElementById("newsletterform")
+                      .addEventListener("submit", function (event) {
+                        event.preventDefault();
+        
+                        let emailInput = document.getElementById("email");
+                        let confirmationMessage = document.getElementById(
+                          "confirmationMessage"
+                        );
+        
+                        if (emailInput.value.includes("@")) {
+                          confirmationMessage.style.display = "block"; // Mostrar mensaje arriba del formulario
+                          emailInput.value = "";
+        
+                          setTimeout(() => {
+                            confirmationMessage.style.display = "none";
+                          }, 10000);
+                        } else {
+                          alert("Por favor, introduce un email válido.");
+                        }
+                      });
+                  });
+                </script>
+                <style>
+                  .hidden {
+                    display: none;
+                  }
+                </style>
+              </section>
+            </footer>
   </body>
 </html>
