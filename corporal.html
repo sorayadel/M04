@@ -32,14 +32,29 @@
             <li>
               <a href="maquillaje.html">Maquillaje</a>
             </li>
+            <li>
+              <a href="catalogo.html">Catálogo</a>
+            </li>
           </span>
         </ul>
       </nav>
-    </header>
+    </header><br>
+    <p class="intro-text">
+      En Skintech, sabemos que cada tipo de piel es único y merece un cuidado
+      excepcional. Por eso, ofrecemos una cuidada selección de productos
+      corporales diseñados para hidratar, revitalizar y embellecer tu piel.
+      ¡Consiente tu cuerpo con productos de alta calidad y disfruta de una piel
+      suave, radiante y saludable todos los días!
+    </p>
     <section class="gallery">
       <div class="image-container">
+        <p class="click-hint">Haz clic para ver más</p>
         <div class="title-overlay">SkinTech Revitalize Wash</div>
-        <img src="img/gel de ducha.png" alt="Producto 1" />
+        <img
+          src="img/gel de ducha.png"
+          alt="Producto 1"
+          onclick="toggleText(this)"
+        />
         <p class="image-description">
           El SkinTech Revitalize Wash es un gel de ducha de última generación
           que combina limpieza efectiva, hidratación avanzada y estimulación
@@ -51,7 +66,11 @@
       </div>
       <div class="image-container">
         <div class="title-overlay">SkinTech Smart Scrub</div>
-        <img src="img/exfoliante corporal skintech.png" alt="Producto 2" />
+        <img
+          src="img/exfoliante corporal skintech.png"
+          alt="Producto 2"
+          onclick="toggleText(this)"
+        />
         <p class="image-description">
           El SkinTech Smart Scrub es un exfoliante corporal de última generación
           que ajusta su intensidad según las necesidades de tu piel. Su
@@ -62,7 +81,11 @@
       </div>
       <div class="image-container">
         <div class="title-overlay">SkinTech HydroBalance</div>
-        <img src="img/loción hidratante skintech.png" alt="Producto 3" />
+        <img
+          src="img/loción hidratante skintech.png"
+          alt="Producto 3"
+          onclick="toggleText(this)"
+        />
         <p class="image-description">
           La SkinTech HydroBalance es una loción corporal de alta tecnología que
           adapta su nivel de hidratación según las necesidades específicas de tu
@@ -73,7 +96,11 @@
       </div>
       <div class="image-container">
         <div class="title-overlay">SkinTech Sculpt \& Firm</div>
-        <img src="img/crema reductora skintech.png" alt="Producto 3" />
+        <img
+          src="img/crema reductora skintech.png"
+          alt="Producto 4"
+          onclick="toggleText(this)"
+        />
         <p class="image-description">
           La SkinTech Sculpt \& Firm es una crema reductora de alta tecnología
           diseñada para mejorar la firmeza y textura de la piel, ayudando a
@@ -82,6 +109,12 @@
           absorción de los activos para potenciar los resultados.
         </p>
       </div>
+      <script>
+        function toggleText(img) {
+          const container = img.closest(".image-container");
+          container.classList.toggle("active");
+        }
+      </script>
     </section>
     <footer>
       <section>
@@ -96,29 +129,63 @@
                 <option value="sin especificar">No especifica</option>
               </select>
               <label for="nombre">Nombre:</label>
-              <input type="text" id="nombre" name="nombre" required><br><br>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                required
+              /><br /><br />
               <label for="apellido">Apellido:</label>
-              <input type="text" id="apellido" name="apellido" required><br><br>
+              <input
+                type="text"
+                id="apellido"
+                name="apellido"
+                required
+              /><br /><br />
             </section>
-            
+
             <section class="form-field">
-              <input type="email" id="email" name="email" required placeholder="Introduce tu email" />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="Introduce tu email"
+              />
               <button type="submit">Suscribirse</button>
             </section>
           </form>
-          <p class="message hidden" id="confirmationMessage">Gracias por suscribirte</p>
+          <p class="message hidden" id="confirmationMessage">
+            Gracias por suscribirte
+          </p>
         </section>
         <script>
-          document.getElementById("newsletterForm").addEventListener("submit", function (event) {
-            event.preventDefault();
-            let emailInput = document.getElementById("email");
-            let confirmationMessage = document.getElementById("confirmationMessage");
-            if (emailInput.value.includes("@")) {
-              confirmationMessage.style.display = "block";
-              emailInput.value = "";
-            } else {
-              alert("Por favor, introduce un email válido.");
-            }
+          document.addEventListener("DOMContentLoaded", function () {
+            // Asegurar que el mensaje esté oculto al recargar la página
+            document.getElementById("confirmationMessage").style.display =
+              "none";
+
+            document
+              .getElementById("newsletterform")
+              .addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                let emailInput = document.getElementById("email");
+                let confirmationMessage = document.getElementById(
+                  "confirmationMessage"
+                );
+
+                if (emailInput.value.includes("@")) {
+                  confirmationMessage.style.display = "block"; // Mostrar mensaje arriba del formulario
+                  emailInput.value = "";
+
+                  setTimeout(() => {
+                    confirmationMessage.style.display = "none"; 
+                  }, 10000);
+                } else {
+                  alert("Por favor, introduce un email válido.");
+                }
+              });
           });
         </script>
       </section>

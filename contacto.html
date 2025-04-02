@@ -1,24 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
+    <title>SkinTech - Catálogo</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>SkinTech</title>
-
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
     <header>
       <section class="ancho">
-        <section class="logo">
+        <div class="logo">
           <img
             src="img/Logo skintech.png"
             alt="Logo de la página"
             class="logo"
-            style="display: flex"
           />
-        </section>
+        </div>
       </section>
       <nav>
         <ul style="list-style-type: none">
@@ -39,72 +36,52 @@
               <a href="catalogo.html">Catálogo</a>
             </li>
             <li>
-              <a href="contacto.html">Contacto/Reserva</a>
+              <a href="index.html">Inicio</a>
             </li>
           </span>
         </ul>
       </nav>
     </header>
-    <main>
-      <section class="promo-container">
-        <img src="img/SkinTech imagen promocional.png" alt="promoción 1" />
-        <img src="img/SkinTech imagen promocional 3.png" alt="promoción 2" />
-      </section>
-    </main>
-    <section class="oferta-container">
-      <div class="oferta-flash">
-        <div class="oferta-item">
-          <h2>🔥 ¡Oferta Flash! 🔥</h2>
-        </div>
-        <div class="oferta-item">
-          <p>¡Aprovecha antes de que termine!</p>
-        </div>
-        <div class="oferta-item contador" id="contador"></div>
-        <div class="oferta-imagen">
-          <img src="img/Oferta serum.png" alt="Producto 1" />
-          <img src="img/SUPER OFERTA.png" alt="Producto 2" />
-        </div>
-      </div>
-    </section>
-
-    <script>
-      function iniciarCuentaRegresiva(duracion) {
-        const contadorElemento = document.getElementById("contador");
-        let tiempoRestante = duracion;
-
-        function actualizarContador() {
-          let horas = Math.floor(tiempoRestante / 3600);
-          let minutos = Math.floor((tiempoRestante % 3600) / 60);
-          let segundos = tiempoRestante % 60;
-
-          contadorElemento.textContent = `${horas
-            .toString()
-            .padStart(2, "0")}:${minutos.toString().padStart(2, "0")}:${segundos
-            .toString()
-            .padStart(2, "0")}`;
-
-          if (tiempoRestante > 0) {
-            tiempoRestante--;
-          } else {
-            contadorElemento.textContent = "Oferta Finalizada";
-          }
-        }
-
-        actualizarContador();
-        setInterval(actualizarContador, 1000);
-      }
-
-      iniciarCuentaRegresiva(3600); // Cuenta regresiva de 1 hora
-    </script>
-
-    <section class="content"></section>
-
     <footer>
       <section>
+        <form id="reservaform" method="POST">
+          <h3>Reserva tus productos</h3>
+          <section class="form-field">
+            <label for="nombre">Nombre:</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              required
+            /><br /><br />
+            <label for="apellidos">Apellidos:</label>
+            <input
+              type="text"
+              id="apellidos"
+              name="apellidos"
+              required
+            /><br /><br />
+          </section>
+          <section class="form-field">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="Introduce tu email"
+            />
+            <label for="mensaje">Mensaje:</label>
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              rows="4"
+              cols="50"
+              required
+              placeholder="Escribe tu mensaje aquí..."
+            ></textarea><br /><br />
+            <button type="submit">Suscribirse</button>
+          </section>
         <section class="footer-content">
-          <p class="confirmation-message" id="confirmationMessage">
-            ¡¡Gracias por suscribirte!!
-          </p>
           <form id="newsletterform" method="POST">
             <h3>Suscríbete a nuestra newsletter!!</h3>
             <section class="form-field">
@@ -141,8 +118,10 @@
               <button type="submit">Suscribirse</button>
             </section>
           </form>
+          <p class="message hidden" id="confirmationMessage">
+            Gracias por suscribirte
+          </p>
         </section>
-
         <script>
           document.addEventListener("DOMContentLoaded", function () {
             // Asegurar que el mensaje esté oculto al recargar la página
@@ -164,7 +143,7 @@
                   emailInput.value = "";
 
                   setTimeout(() => {
-                    confirmationMessage.style.display = "none"; 
+                    confirmationMessage.style.display = "none";
                   }, 10000);
                 } else {
                   alert("Por favor, introduce un email válido.");
@@ -172,12 +151,6 @@
               });
           });
         </script>
-
-        <style>
-          .hidden {
-            display: none;
-          }
-        </style>
       </section>
     </footer>
   </body>

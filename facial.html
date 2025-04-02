@@ -32,14 +32,30 @@
             <li>
               <a href="maquillaje.html">Maquillaje</a>
             </li>
+            <li>
+              <a href="catalogo.html">Catálogo</a>
+            </li>
           </span>
         </ul>
       </nav>
-    </header>
+    </header><br>
+    <p class="intro-text">
+      En Skintech, entendemos que tu piel facial necesita cuidados específicos
+      para mantenerse saludable y radiante. Por eso, te ofrecemos una exclusiva
+      selección de productos faciales diseñados para limpiar, nutrir y
+      rejuvenecer tu rostro. ¡Disfruta de una piel fresca, luminosa y
+      perfectamente equilibrada todos los días con nuestros productos de alta
+      calidad!
+    </p>
     <section class="gallery">
-      <div class="image-container">
+      <section class="image-container">
+        <p class="click-hint">Haz clic para ver más</p>
         <div class="title-overlay">SkinTech Deep Cleanse Gel</div>
-        <img src="img/limpiador facial skintech.png" alt="Producto 1" />
+        <img
+          src="img/limpiador facial skintech.png"
+          alt="Producto 1"
+          onclick="toggleText(this)"
+        />
         <p class="image-description">
           Descubre el SkinTech Deep Cleanse Gel, un limpiador facial futurista
           diseñado con tecnología avanzada para una limpieza profunda y eficaz
@@ -48,10 +64,15 @@
           pantalla led inteligente para indicar el producto restante y un
           dosificador airless de precisión que evita el desperdicio de producto.
         </p>
-      </div>
-      <div class="image-container">
+      </section>
+
+      <section class="image-container">
         <div class="title-overlay">SkinTech Hydrate + Shield</div>
-        <img src="img/Crema de día skintech.png" alt="Producto 2" />
+        <img
+          src="img/Crema de día skintech.png"
+          alt="Producto 2"
+          onclick="toggleText(this)"
+        />
         <p class="image-description">
           La SkinTech Hydrate+ Shield es una crema de día de última generación
           diseñada para ofrecer hidratación avanzada, protección solar
@@ -59,10 +80,15 @@
           sistema de sensores UV y dosificación inteligente redefine el cuidado
           facial diario.
         </p>
-      </div>
-      <div class="image-container">
+      </section>
+
+      <section class="image-container">
         <div class="title-overlay">SkinTech Night Repair</div>
-        <img src="img/crema de noche skintech.png" alt="Producto 3" />
+        <img
+          src="img/crema de noche skintech.png"
+          alt="Producto 3"
+          onclick="toggleText(this)"
+        />
         <p class="image-description">
           La SkinTech Night Repair es una crema de noche de alta tecnología que
           trabaja en sintonía con los ritmos nocturnos de la piel para maximizar
@@ -71,10 +97,15 @@
           a las necesidades de tu piel cada noche, asegurando un tratamiento
           personalizado y eficaz.
         </p>
-      </div>
-      <div class="image-container">
+      </section>
+
+      <section class="image-container">
         <div class="title-overlay">SkinTech UltraBoost Serum</div>
-        <img src="img/serum facial skintech.png" alt="Producto 3" />
+        <img
+          src="img/serum facial skintech.png"
+          alt="Producto 4"
+          onclick="toggleText(this)"
+        />
         <p class="image-description">
           El SkinTech UltraBoost Serum es un concentrado de alta tecnología
           diseñado para proporcionar una acción antioxidante, iluminadora y
@@ -83,7 +114,14 @@
           las necesidades de tu piel gracias a su sensor biométrico, que analiza
           la hidratación y el estado cutáneo en tiempo real.
         </p>
-      </div>
+      </section>
+
+      <script>
+        function toggleText(img) {
+          const container = img.closest(".image-container");
+          container.classList.toggle("active");
+        }
+      </script>
     </section>
     <footer>
       <section>
@@ -98,29 +136,63 @@
                 <option value="sin especificar">No especifica</option>
               </select>
               <label for="nombre">Nombre:</label>
-              <input type="text" id="nombre" name="nombre" required><br><br>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                required
+              /><br /><br />
               <label for="apellido">Apellido:</label>
-              <input type="text" id="apellido" name="apellido" required><br><br>
+              <input
+                type="text"
+                id="apellido"
+                name="apellido"
+                required
+              /><br /><br />
             </section>
-            
+
             <section class="form-field">
-              <input type="email" id="email" name="email" required placeholder="Introduce tu email" />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="Introduce tu email"
+              />
               <button type="submit">Suscribirse</button>
             </section>
           </form>
-          <p class="message hidden" id="confirmationMessage">Gracias por suscribirte</p>
+          <p class="message hidden" id="confirmationMessage">
+            Gracias por suscribirte
+          </p>
         </section>
         <script>
-          document.getElementById("newsletterForm").addEventListener("submit", function (event) {
-            event.preventDefault();
-            let emailInput = document.getElementById("email");
-            let confirmationMessage = document.getElementById("confirmationMessage");
-            if (emailInput.value.includes("@")) {
-              confirmationMessage.style.display = "block";
-              emailInput.value = "";
-            } else {
-              alert("Por favor, introduce un email válido.");
-            }
+          document.addEventListener("DOMContentLoaded", function () {
+            // Asegurar que el mensaje esté oculto al recargar la página
+            document.getElementById("confirmationMessage").style.display =
+              "none";
+
+            document
+              .getElementById("newsletterform")
+              .addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                let emailInput = document.getElementById("email");
+                let confirmationMessage = document.getElementById(
+                  "confirmationMessage"
+                );
+
+                if (emailInput.value.includes("@")) {
+                  confirmationMessage.style.display = "block"; // Mostrar mensaje arriba del formulario
+                  emailInput.value = "";
+
+                  setTimeout(() => {
+                    confirmationMessage.style.display = "none"; 
+                  }, 10000);
+                } else {
+                  alert("Por favor, introduce un email válido.");
+                }
+              });
           });
         </script>
       </section>

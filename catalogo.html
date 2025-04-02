@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>SkinTech - Catálogo</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <section class="ancho">
+        <div class="logo">
+          <img
+            src="img/Logo skintech.png"
+            alt="Logo de la página"
+            class="logo"
+          />
+        </div>
+      </section>
+      <nav>
+        <ul style="list-style-type: none">
+          <span class="es" style="display: inline-flex">
+            <li>
+              <a href="cabello.html">Cabello</a>
+            </li>
+            <li>
+              <a href="facial.html">Cosmetica Facial</a>
+            </li>
+            <li>
+              <a href="corporal.html">Cosmetica Corporal</a>
+            </li>
+            <li>
+              <a href="maquillaje.html">Maquillaje</a>
+            </li>
+            <li>
+              <a href="index.html">Inicio</a>
+            </li>
+          </span>
+        </ul>
+      </nav>
+    </header>
+    <br />
+    <body>
+      <section class="catalogo">
+        <a href="img/Catálogo skintech.pdf">
+          <img src="img/Foto catálogo.png" alt="Catalogo de la página" />
+        </a>
+        <p class="intro-text"></p>
+      </section>
+      <footer>
+        <section>
+          <section class="footer-content">
+            <form id="newsletterform" method="POST">
+              <h3>Suscríbete a nuestra newsletter!!</h3>
+              <section class="form-field">
+                <label for="sexo">Género:</label>
+                <select id="sexo" name="sexo">
+                  <option value="hombre">Hombre</option>
+                  <option value="mujer">Mujer</option>
+                  <option value="sin especificar">No especifica</option>
+                </select>
+                <label for="nombre">Nombre:</label>
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  required
+                /><br /><br />
+                <label for="apellido">Apellido:</label>
+                <input
+                  type="text"
+                  id="apellido"
+                  name="apellido"
+                  required
+                /><br /><br />
+              </section>
+
+              <section class="form-field">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="Introduce tu email"
+                />
+                <button type="submit">Suscribirse</button>
+              </section>
+            </form>
+            <p class="message hidden" id="confirmationMessage">
+              Gracias por suscribirte
+            </p>
+          </section>
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              // Asegurar que el mensaje esté oculto al recargar la página
+              document.getElementById("confirmationMessage").style.display =
+                "none";
+
+              document
+                .getElementById("newsletterform")
+                .addEventListener("submit", function (event) {
+                  event.preventDefault();
+
+                  let emailInput = document.getElementById("email");
+                  let confirmationMessage = document.getElementById(
+                    "confirmationMessage"
+                  );
+
+                  if (emailInput.value.includes("@")) {
+                    confirmationMessage.style.display = "block"; // Mostrar mensaje arriba del formulario
+                    emailInput.value = "";
+
+                    setTimeout(() => {
+                      confirmationMessage.style.display = "none";
+                    }, 10000);
+                  } else {
+                    alert("Por favor, introduce un email válido.");
+                  }
+                });
+            });
+          </script>
+        </section>
+      </footer>
+    </body>
+  </body>
+</html>
