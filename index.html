@@ -13,42 +13,35 @@
       <section class="ancho">
         <section class="logo">
           <img
-            src="img/Logo skintech.png"
+            src="img/logo_skintech.png"
             alt="Logo de la página"
             class="logo"
-            style="display: flex"
           />
         </section>
       </section>
       <nav>
-        <ul style="list-style-type: none">
-          <span class="es" style="display: inline-flex">
-            <li>
-              <a href="cabello.html">Cabello</a>
-            </li>
-            <li>
-              <a href="facial.html">Cosmetica Facial</a>
-            </li>
-            <li>
-              <a href="corporal.html">Cosmetica Corporal</a>
-            </li>
-            <li>
-              <a href="maquillaje.html">Maquillaje</a>
-            </li>
-            <li>
-              <a href="catalogo.html">Catálogo</a>
-            </li>
-            <li>
-              <a href="contacto.html">Contacto/Reserva</a>
-            </li>
-          </span>
+        <ul
+          style="
+            list-style-type: none;
+            display: flex;
+            gap: 1rem;
+            padding: 0;
+            margin: 0;
+          "
+        >
+          <li><a href="cabello.html">Cabello</a></li>
+          <li><a href="facial.html">Cosmetica Facial</a></li>
+          <li><a href="corporal.html">Cosmetica Corporal</a></li>
+          <li><a href="maquillaje.html">Maquillaje</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="contacto.html">Contacto/Reserva</a></li>
         </ul>
       </nav>
     </header>
     <main>
       <section class="promo-container">
-        <img src="img/SkinTech imagen promocional.png" alt="promoción 1" />
-        <img src="img/skintech_imagen_promocional_3.png" alt="promoción 2" />
+        <img src="img/imagen_promocional.png" alt="promoción 1" />
+        <img src="img/imagen_promocional_2.png" alt="promoción 2" />
       </section>
     </main>
     <section class="oferta-container">
@@ -61,11 +54,11 @@
         </div>
         <div class="oferta-item contador" id="contador"></div>
         <div class="oferta-imagen">
-          <img src="img/Oferta serum.png" alt="Producto 1" />
-          <img src="img/SUPER OFERTA.png" alt="Producto 2" />
+          <img src="img/oferta_serum.png" alt="Producto 1" />
+          <img src="img/oferta_crema.png" alt="Producto 2" />
         </div>
       </div>
-    </section>
+    </section><br /><br />
 
     <script>
       function iniciarCuentaRegresiva(duracion) {
@@ -164,7 +157,7 @@
                   emailInput.value = "";
 
                   setTimeout(() => {
-                    confirmationMessage.style.display = "none"; 
+                    confirmationMessage.style.display = "none";
                   }, 10000);
                 } else {
                   alert("Por favor, introduce un email válido.");

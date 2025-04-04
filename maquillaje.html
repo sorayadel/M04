@@ -10,47 +10,41 @@
     <header>
       <section class="ancho"></section>
       <div class="logo">
-        <img src="img/Logo skintech.png" alt="Logo de la página" class="logo" />
+        <img src="img/logo_skintech.png" alt="Logo de la página" class="logo" />
       </div>
       <nav>
-        <ul style="list-style-type: none">
-          <span class="es" style="display: inline-flex">
-            <li>
-              <a href="cabello.html">Cabello</a>
-            </li>
-            <li>
-              <a href="facial.html">Cosmetica Facial</a>
-            </li>
-            <li>
-              <a href="corporal.html">Cosmetica Corporal</a>
-            </li>
-            <li>
-              <a href="index.html">Inicio</a>
-            </li>
-            <li>
-              <a href="catalogo.html">Catálogo</a>
-            </li>
-            <li>
-              <a href="contacto.html">Contacto/Reserva</a>
-            </li>
-          </span>
-        </ul>
+        <ul
+        style="
+          list-style-type: none;
+          display: flex;
+          gap: 1rem;
+          padding: 0;
+          margin: 0;
+        "
+      >
+        <li><a href="cabello.html">Cabello</a></li>
+        <li><a href="facial.html">Cosmetica Facial</a></li>
+        <li><a href="corporal.html">Cosmetica Corporal</a></li>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="contacto.html">Contacto/Reserva</a></li>
+      </ul>
       </nav>
     </header>
     <br />
     <p class="intro-text">
-      En [Nombre de tu marca], sabemos que el maquillaje es una herramienta
+      En SkinTech, sabemos que el maquillaje es una herramienta
       poderosa para resaltar tu belleza única. Por eso, ofrecemos una selección
       de productos de alta calidad, diseñados para realzar tus rasgos y brindar
       resultados duraderos. ¡Descubre la magia del maquillaje y siente la
       confianza de expresar tu estilo con nuestros productos exclusivos!
     </p>
     <section class="gallery">
-      <div class="image-container">
+      <section class="image-container">
         <p class="click-hint">Haz clic para ver más</p>
-        <div class="title-overlay">SkinTech Smart Foundation</div>
+        <h2 class="title-overlay">SkinTech Smart Foundation</h2>
         <img
-          src="img/base maquillaje skintech.png"
+          src="img/base_maquillaje_skintech.png"
           alt="Producto 1"
           onclick="toggleText(this)"
         />
@@ -62,11 +56,11 @@
           natural. Además, su fórmula ultraligera hidrata, protege y se mantiene
           intacta durante todo el día.
         </p>
-      </div>
-      <div class="image-container">
-        <div class="title-overlay">SkinTech Smart Concealer</div>
+      </section>
+      <section class="image-container">
+        <h2 class="title-overlay">SkinTech Smart Concealer</h2>
         <img
-          src="img/corrector skintech.png"
+          src="img/corrector_skintech.png"
           alt="Producto 2"
           onclick="toggleText(this)"
         />
@@ -79,11 +73,11 @@
           no se cuartea ni marca líneas de expresión, manteniendo la piel fresca
           e hidratada todo el día.
         </p>
-      </div>
-      <div class="image-container">
-        <div class="title-overlay">SkinTech Smart Mascara</div>
+      </section>
+      <section class="image-container">
+        <h2 class="title-overlay">SkinTech Smart Mascara</h2>
         <img
-          src="img/mascara de pestañas skintech.png"
+          src="img/mascara_pestañas_skintech.png"
           alt="Producto 3"
           onclick="toggleText(this)"
         />
@@ -97,11 +91,11 @@
           duración está enriquecida con activos fortalecedores que nutren y
           protegen cada pestaña.
         </p>
-      </div>
-      <div class="image-container">
-        <div class="title-overlay">SkinTech Smart Eyeshadow Palette</div>
+      </section>
+      <section class="image-container">
+        <h2 class="title-overlay">SkinTech Smart Eyeshadow Palette</h2>
         <img
-          src="img/paleta sombras skintech.png"
+          src="img/paleta_skintech.png"
           alt="Producto 4"
           onclick="toggleText(this)"
         />
@@ -113,7 +107,7 @@
           cada sombra y guía la aplicación para lograr looks profesionales con
           facilidad.
         </p>
-      </div>
+      </section>
       <script>
         function toggleText(img) {
           const container = img.closest(".image-container");

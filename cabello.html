@@ -8,38 +8,32 @@
   </head>
   <body>
     <header>
-      <section class="ancho">
+      <div class="ancho">
         <div class="logo">
           <img
-            src="img/Logo skintech.png"
+            src="img/logo_skintech.png"
             alt="Logo de la página"
             class="logo"
           />
         </div>
-      </section>
+      </div>
       <nav>
-        <ul style="list-style-type: none">
-          <span class="es" style="display: inline-flex">
-            <li>
-              <a href="index.html">Inicio</a>
-            </li>
-            <li>
-              <a href="facial.html">Cosmetica Facial</a>
-            </li>
-            <li>
-              <a href="corporal.html">Cosmetica Corporal</a>
-            </li>
-            <li>
-              <a href="maquillaje.html">Maquillaje</a>
-            </li>
-            <li>
-              <a href="catalogo.html">Catálogo</a>
-            </li>
-            <li>
-              <a href="contacto.html">Contacto/Reserva</a>
-            </li>
-          </span>
-        </ul>
+        <ul
+        style="
+          list-style-type: none;
+          display: flex;
+          gap: 1rem;
+          padding: 0;
+          margin: 0;
+        "
+      >
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="facial.html">Cosmetica Facial</a></li>
+        <li><a href="corporal.html">Cosmetica Corporal</a></li>
+        <li><a href="maquillaje.html">Maquillaje</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="contacto.html">Contacto/Reserva</a></li>
+      </ul>
       </nav>
     </header>
     <br />
@@ -53,9 +47,9 @@
     <section class="gallery">
       <section class="image-container">
         <p class="click-hint">Haz clic para ver más</p>
-        <div class="title-overlay">Champú SkinTech</div>
+        <h2 class="title-overlay">Champú SkinTech</h2>
         <img
-          src="img/champu skintech.png"
+          src="img/champu_skintech.png"
           alt="Producto 1"
           onclick="toggleText(this)"
         />
@@ -67,9 +61,9 @@
         </p>
       </section>
       <section class="image-container">
-        <div class="title-overlay">Acondicionador SkinTech</div>
+        <h2 class="title-overlay">Acondicionador SkinTech</h2>
         <img
-          src="img/acondicionador skintech.png"
+          src="img/acondicionador_skintech.png"
           alt="Producto 2"
           onclick="toggleText(this)"
         />
@@ -82,9 +76,9 @@
         </p>
       </section>
       <section class="image-container">
-        <div class="title-overlay">Mascarilla Capilar SkinTech</div>
+        <h2 class="title-overlay">Mascarilla Capilar SkinTech</h2>
         <img
-          src="img/mascarilla capilar skintech.png"
+          src="img/mascarilla_capilar_skintech.png"
           alt="Producto 3"
           onclick="toggleText(this)"
         />
@@ -97,9 +91,9 @@
         </p>
       </section>
       <section class="image-container">
-        <div class="title-overlay">Sérum Capilar SkinTech</div>
+        <h2 class="title-overlay">Sérum Capilar SkinTech</h2>
         <img
-          src="img/serum capilar skintech.png"
+          src="img/serum_capilar_skintech.png"
           alt="Producto 4"
           onclick="toggleText(this)"
         />

@@ -27,6 +27,7 @@ header {
 }
 
 .logo {
+  display: flex;
   width: 27%;
   height: 27%;
   margin-top: 10px;
@@ -34,10 +35,18 @@ header {
 }
 
 li {
-  margin-left: 5%;
-  margin-top: 0.5%;
+  display: grid;
+  margin: 0.5% 5%;
   text-align: center;
-  font-size: 18px;
+  font-size: 1rem;
+}
+
+/* Estilo responsive para móviles */
+@media (max-width: 800px) {
+  li {
+    margin: 0.5% 0.5%;
+    font-size: 0.4rem; /* Un poco más pequeño */
+  }
 }
 
 .promo-container {
@@ -101,48 +110,102 @@ li {
   flex: 1; /* Empuja el footer hacia abajo */
 }
 
-footer {
-  footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 10px;
-    width: 100%;
-    background-color: #6794ac;
-    color: white;
-  }
+.contacto img {
+  display: grid;
+  justify-content: center;
+  margin: auto;
+  width: 50%;
+  max-width: 50%;
+  height: auto;
+}
 
-  .Contacto {
-    text-align: left;
-    margin-right: auto;
+footer {
+  display: flex;
+  justify-content: flex-end; /* Alinea los elementos a la derecha */
+  align-items: flex-end; /* Alinea los elementos al fondo */
+  padding: 10px;
+  width: 100%;
+  background: radial-gradient(circle, #7d84b7, #8790ca, #93b9f2);
+  color: white;
+  bottom: 0; /* Fija el footer al fondo de la página */
+  right: 0;
+  left: 0;
+  z-index: 10; /* Asegura que esté encima de otros elementos */
+  flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+}
+
+/* Contenido del footer */
+.footer-content {
+  text-align: right;
+  margin-left: auto;
+  margin-top: 0; /* Elimina el margen superior */
+  border-radius: 2%;
+  padding: 8px 12px; /* Asegura un buen padding */
+  max-width: 90%; /* Limita el ancho para que no ocupe demasiado espacio */
+  font-size: 14px; /* Ajuste de tamaño de texto */
+}
+
+/* Estilo de los botones */
+button {
+  background-color: #58585a;
+  color: white;
+  border: none;
+  padding: 6px 15px; /* Ajuste del padding */
+  cursor: pointer;
+  font-size: 14px; /* Tamaño de fuente reducido */
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #3d6986;
+}
+
+.confirmation-message {
+  display: none; /* Oculto por defecto */
+  margin-bottom: 25px; 
+  width: 100%; 
+}
+
+/* Media query para pantallas más pequeñas (móviles) */
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column; /* Los elementos se apilan verticalmente */
+    align-items: center;    /* Centra los elementos */
+    padding: 15px; /* Añadimos algo de padding extra */
   }
 
   .footer-content {
-    text-align: right;
-    margin-left: auto;
-    margin-top: 220px;
-    background: radial-gradient(circle, #7d84b7, #8790ca, #93b9f2);
-    border-radius: 2%;
+    text-align: center;  /* Centra el texto dentro del .footer-content */
+    margin-left: 0;
+    margin-top: 10px; /* Reduce el margen superior */
+    width: 100%; /* Asegura que se ajuste al tamaño de la pantalla */
+    font-size: 12px; /* Reducción del tamaño de fuente */
   }
 
   button {
-    background-color: #58585a;
-    color: white;
-    border: none;
-    padding: 8px 17px;
-    cursor: pointer;
-    font-size: 15px;
-    border-radius: 4px;
-  }
-
-  button:hover {
-    background-color: #3d6986;
+    font-size: 12px; /* Ajuste aún más pequeño */
+    padding: 5px 12px; /* Reducido el padding */
   }
 
   .confirmation-message {
-    display: none; /* Oculto por defecto */
-    margin-bottom: 25px; 
-    width: 100%; 
+    margin-bottom: 10px; /* Ajuste de márgenes */
+  }
+}
+
+/* Media query para pantallas más pequeñas (móviles muy pequeños) */
+@media (max-width: 480px) {
+  footer {
+    padding: 10px; /* Menos padding en pantallas más pequeñas */
+  }
+
+  .footer-content {
+    font-size: 10px; /* Fuente aún más pequeña */
+    padding: 5px 10px; /* Menos padding */
+  }
+
+  button {
+    font-size: 11px; /* Reducir más el tamaño del botón */
+    padding: 5px 10px; /* Ajuste del padding */
   }
 }
 
@@ -154,7 +217,7 @@ footer {
   margin-top: 4%;
   margin-bottom: 3%;
   width: 85%; /* Asegura que ocupe más espacio */
-  max-width: 700px; 
+  max-width: 600px; 
   margin: auto;
 }
 
@@ -163,35 +226,54 @@ footer {
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px; /* Espacio entre imágenes */
+  padding: 10px;
 }
 
+/* Contenedor de cada imagen */
 .image-container {
   width: 250px;
   text-align: center;
-}
-
-.image-container img {
-  width: 100%;
-  border-radius: 5%;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.image-container {
   position: relative;
   display: inline-block;
-  text-align: center;
   margin: 2.5%;
 }
 
+/* Ajuste para imágenes */
 .image-container img {
-  width: 250px; /* Tamaño ajustable */
+  width: 100%; /* Hace que las imágenes se ajusten al 100% del ancho del contenedor */
   border-radius: 5%;
-  display: flex;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s ease-in-out;
+  cursor: pointer;
 }
 
+.image-container img:hover {
+  opacity: 0.8; /* Reduce la opacidad al pasar el mouse */
+}
+
+/* Descripción de la imagen */
+.image-description {
+  font-size: 16px;
+  color: #3e3e3e;
+  text-align: center;
+  margin-top: 10px;
+  line-height: 1.5;
+  font-weight: 400;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: none; /* Oculto por defecto */
+}
+
+/* Mostrar la descripción cuando el contenedor tiene la clase "active" */
+.image-container.active .image-description {
+  display: block;
+}
+
+/* Overlay con el título de la imagen */
 .title-overlay {
   position: absolute;
-  top: 0.1%; /* Ajusta la posición */
+  top: 10px; /* Ajusta la posición */
   left: 50%;
   transform: translateX(-50%);
   background: rgba(67, 67, 67, 0.7); /* Fondo oscuro semitransparente */
@@ -202,35 +284,7 @@ footer {
   border-radius: 5px;
 }
 
-.image-description {
-  font-size: 16px; 
-  color: #3e3e3e; /* Color del texto */
-  text-align: center; 
-  margin-top: 10px; 
-  line-height: 1.5; 
-  font-weight: 400; 
-  max-width: 80%; 
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.image-description {
-  display: none; /* Inicialmente oculto */
-}
-
-.image-container.active .image-description {
-  display: block; /* Mostrar cuando tenga la clase 'active' */
-}
-
-.image-container img {
-  cursor: pointer; /* Cambia el cursor a una mano */
-  transition: opacity 0.3s ease-in-out; 
-}
-
-.image-container img:hover {
-  opacity: 0.8; /* Reduce la opacidad al pasar el mouse */
-}
-
+/* Pista de clic */
 .click-hint {
   position: absolute;
   bottom: 99%;
@@ -245,6 +299,48 @@ footer {
   transition: opacity 0.3s;
 }
 
+/* Media queries para pantallas pequeñas */
+
+/* Para tabletas y pantallas medianas */
+@media (max-width: 768px) {
+  .image-container {
+    width: 45%; /* Dos imágenes por fila */
+    margin: 2.5%;
+  }
+
+  .image-description {
+    font-size: 14px; /* Reducir el tamaño de la fuente */
+  }
+
+  .title-overlay {
+    font-size: 12px; /* Reducir el tamaño de la fuente en el overlay */
+  }
+
+  .click-hint {
+    font-size: 12px; /* Reducir el tamaño de la pista de clic */
+  }
+}
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+  .image-container {
+    width: 90%; /* Una imagen por fila */
+    margin: 5% 0; /* Margen superior e inferior */
+  }
+
+  .image-description {
+    font-size: 12px; /* Ajustar el tamaño del texto para móviles */
+  }
+
+  .title-overlay {
+    font-size: 11px; /* Ajustar tamaño del título en overlay */
+  }
+
+  .click-hint {
+    font-size: 11px; /* Ajustar tamaño de la pista de clic */
+  }
+}
+
 .catalogo img {
   display: grid;
   justify-content: center;
@@ -252,7 +348,7 @@ footer {
   align-items: center;
   margin: auto;
   width: 100%;
-  max-width: 30%; 
+  max-width: 35%; 
   height: auto;
 }
 
@@ -263,7 +359,7 @@ footer {
   align-items: left;
   margin: auto;
   width: 50%;
-  max-width: 30%; 
+  max-width: 45%; 
   height: auto;
 }
 
@@ -272,12 +368,14 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: right;
-  width: 100%;
+  width: 85%;
   margin-top: 20px;
   padding: 20px;
   background-color: #a6c5de;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-left: auto;
+  margin-right: auto;
 }
 .form-reserve label {
   text-align: center;
