@@ -170,8 +170,8 @@ button:hover {
 
 .confirmation-message {
   display: none; /* Oculto por defecto */
-  margin-bottom: 25px; 
-  width: 100%; 
+  margin-bottom: 25px;
+  width: 100%;
 }
 
 .hidden {
@@ -182,12 +182,12 @@ button:hover {
 @media (max-width: 768px) {
   footer {
     flex-direction: column; /* Los elementos se apilan verticalmente */
-    align-items: center;    /* Centra los elementos */
+    align-items: center; /* Centra los elementos */
     padding: 15px; /* Añadimos algo de padding extra */
   }
 
   .footer-content {
-    text-align: center;  /* Centra el texto dentro del .footer-content */
+    text-align: center; /* Centra el texto dentro del .footer-content */
     margin-left: 0;
     margin-top: 10px; /* Reduce el margen superior */
     width: 100%; /* Asegura que se ajuste al tamaño de la pantalla */
@@ -229,7 +229,7 @@ button:hover {
   margin-top: 4%;
   margin-bottom: 3%;
   width: 85%; /* Asegura que ocupe más espacio */
-  max-width: 600px; 
+  max-width: 600px;
   margin: auto;
 }
 
@@ -360,7 +360,7 @@ button:hover {
   align-items: center;
   margin: auto;
   width: 100%;
-  max-width: 35%; 
+  max-width: 35%;
   height: auto;
 }
 
@@ -371,7 +371,7 @@ button:hover {
   align-items: left;
   margin: auto;
   width: 50%;
-  max-width: 45%; 
+  max-width: 45%;
   height: auto;
 }
 

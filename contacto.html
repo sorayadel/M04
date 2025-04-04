@@ -13,13 +13,13 @@
       </div>
       <nav>
         <ul class="nav-menu">
-        <li><a href="cabello.html">Cabello</a></li>
-        <li><a href="facial.html">Cosmetica Facial</a></li>
-        <li><a href="corporal.html">Cosmetica Corporal</a></li>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="catalogo.html">Catálogo</a></li>
-        <li><a href="contacto.html">Contacto/Reserva</a></li>
-      </ul>
+          <li><a href="cabello.html">Cabello</a></li>
+          <li><a href="facial.html">Cosmetica Facial</a></li>
+          <li><a href="corporal.html">Cosmetica Corporal</a></li>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="contacto.html">Contacto/Reserva</a></li>
+        </ul>
       </nav>
     </header>
     <br />
@@ -59,7 +59,8 @@
         ></textarea
         ><br /><br />
         <button type="submit">Contacta</button>
-      </section><br /><br />
+      </section>
+      <br /><br />
     </form>
     <footer>
       <section>
@@ -103,59 +104,58 @@
             </section>
           </form>
         </section>
-        <script>
-          document.addEventListener("DOMContentLoaded", function () {
-            const reservaForm = document.getElementById("reservaform");
-            const confirmationMessage = document.getElementById(
-              "reservaConfirmationMessage"
-            );
-
-            reservaForm.addEventListener("submit", function (event) {
-              event.preventDefault(); // Evita el envío real del formulario
-
-              // Mostrar el mensaje de confirmación
-              confirmationMessage.classList.remove("hidden");
-
-              // Opcional: Ocultar el mensaje después de unos segundos
-              setTimeout(() => {
-                confirmationMessage.classList.add("hidden");
-              }, 5000);
-
-              // Opcional: Limpiar los campos del formulario
-              reservaForm.reset();
-            });
-          });
-        </script>
-        <script>
-          document.addEventListener("DOMContentLoaded", function () {
-            // Asegurar que el mensaje esté oculto al recargar la página
-            document.getElementById("confirmationMessage").style.display =
-              "none";
-
-            document
-              .getElementById("newsletterform")
-              .addEventListener("submit", function (event) {
-                event.preventDefault();
-
-                let emailInput = document.getElementById("email_newsletter");
-                let confirmationMessage = document.getElementById(
-                  "confirmationMessage"
-                );
-
-                if (emailInput.value.includes("@")) {
-                  confirmationMessage.style.display = "block"; // Mostrar mensaje arriba del formulario
-                  emailInput.value = "";
-
-                  setTimeout(() => {
-                    confirmationMessage.style.display = "none";
-                  }, 10000);
-                } else {
-                  alert("Por favor, introduce un email válido.");
-                }
-              });
-          });
-        </script>
       </section>
     </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const reservaForm = document.getElementById("reservaform");
+        const confirmationMessage = document.getElementById(
+          "reservaConfirmationMessage"
+        );
+
+        reservaForm.addEventListener("submit", function (event) {
+          event.preventDefault(); // Evita el envío real del formulario
+
+          // Mostrar el mensaje de confirmación
+          confirmationMessage.classList.remove("hidden");
+
+          // Opcional: Ocultar el mensaje después de unos segundos
+          setTimeout(() => {
+            confirmationMessage.classList.add("hidden");
+          }, 5000);
+
+          // Opcional: Limpiar los campos del formulario
+          reservaForm.reset();
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Asegurar que el mensaje esté oculto al recargar la página
+        document.getElementById("confirmationMessage").style.display = "none";
+
+        document
+          .getElementById("newsletterform")
+          .addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            let emailInput = document.getElementById("email_newsletter");
+            let confirmationMessage = document.getElementById(
+              "confirmationMessage"
+            );
+
+            if (emailInput.value.includes("@")) {
+              confirmationMessage.style.display = "block"; // Mostrar mensaje arriba del formulario
+              emailInput.value = "";
+
+              setTimeout(() => {
+                confirmationMessage.style.display = "none";
+              }, 10000);
+            } else {
+              alert("Por favor, introduce un email válido.");
+            }
+          });
+      });
+    </script>
   </body>
 </html>
