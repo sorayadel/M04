@@ -31,8 +31,7 @@
     </section>
     <br /><br />
     <footer>
-      <section>
-        <section class="footer-content">
+        <div class="footer-content">
           <p class="message hidden" id="confirmationMessage">
             Gracias por suscribirte
           </p>
@@ -59,21 +58,19 @@
                 name="apellido"
                 required
               /><br /><br />
+              <div class="form-field">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="Introduce tu email"
+                />
+                <button type="submit">Suscribirse</button>
+              </div>
             </section>
-
-            <div class="form-field">
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                placeholder="Introduce tu email"
-              />
-              <button type="submit">Suscribirse</button>
-            </div>
           </form>
-        </section>
-      </section>
+        </div>
     </footer>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
