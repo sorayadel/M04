@@ -101,34 +101,28 @@
       </script>
     </section>
     <footer>
-        <div class="footer-content">
-          <p class="message hidden" id="confirmationMessage">
-            Gracias por suscribirte
-          </p>
-          <form id="newsletterform" method="POST">
-            <section class="form-field">
-              <h3>Suscríbete a nuestra newsletter!!</h3>
-              <label for="sexo">Género:</label>
-              <select id="sexo" name="sexo">
-                <option value="hombre">Hombre</option>
-                <option value="mujer">Mujer</option>
-                <option value="sin especificar">No especifica</option>
-              </select>
-              <label for="nombre">Nombre:</label>
-              <input
-                type="text"
-                id="nombre"
-                name="nombre"
-                required
-              /><br /><br />
-              <label for="apellido">Apellido:</label>
-              <input
-                type="text"
-                id="apellido"
-                name="apellido"
-                required
-              /><br /><br />
-            </section>
+      <div class="footer-content">
+        <p class="message hidden" id="confirmationMessage">
+          Gracias por suscribirte
+        </p>
+        <form id="newsletterform" method="POST">
+          <section class="form-field">
+            <h3>Suscríbete a nuestra newsletter!!</h3>
+            <label for="sexo">Género:</label>
+            <select id="sexo" name="sexo">
+              <option value="hombre">Hombre</option>
+              <option value="mujer">Mujer</option>
+              <option value="sin especificar">No especifica</option>
+            </select>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required /><br /><br />
+            <label for="apellido">Apellido:</label>
+            <input
+              type="text"
+              id="apellido"
+              name="apellido"
+              required
+            /><br /><br />
             <div class="form-field">
               <input
                 type="email"
@@ -139,8 +133,9 @@
               />
               <button type="submit">Suscribirse</button>
             </div>
-          </form>
-        </div>
+          </section>
+        </form>
+      </div>
     </footer>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
