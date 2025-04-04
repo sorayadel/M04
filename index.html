@@ -10,13 +10,9 @@
   </head>
   <body>
     <header>
-        <div class="logo">
-          <img
-            src="img/logo_skintech.png"
-            alt="Logo de la página"
-            class="logo"
-          />
-        </div>
+      <div class="logo">
+        <img src="img/logo_skintech.png" alt="Logo de la página" class="logo" />
+      </div>
       <nav>
         <ul class="nav-menu">
           <li><a href="cabello.html">Cabello</a></li>
@@ -87,8 +83,8 @@
           ¡¡Gracias por suscribirte!!
         </p>
         <form id="newsletterform" method="POST">
-          <h3>Suscríbete a nuestra newsletter!!</h3>
           <section class="form-field">
+            <h3>Suscríbete a nuestra newsletter!!</h3>
             <label for="sexo">Género:</label>
             <select id="sexo" name="sexo">
               <option value="hombre">Hombre</option>
@@ -106,7 +102,7 @@
             /><br /><br />
           </section>
 
-          <section class="form-field">
+          <div class="form-field">
             <input
               type="email"
               id="email"
@@ -115,7 +111,7 @@
               placeholder="Introduce tu email"
             />
             <button type="submit">Suscribirse</button>
-          </section>
+          </div>
         </form>
       </section>
     </footer>
